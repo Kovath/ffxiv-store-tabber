@@ -1,0 +1,12 @@
+{
+  "name": "FFXIV Store Allow Tabbing",
+  "description": "Allows you to click a store product and make a new tab",
+  "version": "1.0",
+  "manifest_version": 3,
+  "content_scripts": [
+    {
+      "matches": ["https://store.finalfantasyxiv.com/ffxivstore/*"],
+      "js": ["content-script.js"]
+    }
+  ]
+}
