@@ -7,7 +7,7 @@ const APPLIED_CLASS = 'product-url-applied'
 
 // some utility stuff
 function catalog_url(limit, offset, language = LANGUAGE, currency = CURRENCY) {
-	retyrb `https://api.store.finalfantasyxiv.com/ffxivcatalog/api/products/?lang=${language}&currency=${currency}&limit=${limit}&offset=${offset}`;
+	return `https://api.store.finalfantasyxiv.com/ffxivcatalog/api/products/?lang=${language}&currency=${currency}&limit=${limit}&offset=${offset}`;
 }
 
 function product_url(id, language = LANGUAGE) {
@@ -54,8 +54,6 @@ function apply_product_ids() {
 		return !item.classList.contains(APPLIED_CLASS)
 	})
 
-	console.log(product_items.length);
-	console.log(product_items)
 	for(let i = 0; i < product_items.length; i++) {
 		set_product_id(product_info, product_items[i]);
 	}
